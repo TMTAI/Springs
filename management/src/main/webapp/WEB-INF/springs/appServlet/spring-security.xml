@@ -9,7 +9,7 @@
     <http use-expressions="true">
         <csrf disabled="true" />
 
-        <intercept-url pattern="/" access="permitAll()" />
+        <!-- <intercept-url pattern="/" access="permitAll()" /> -->
         <intercept-url pattern="/home" access="permitAll()" />
         <intercept-url pattern="/login" access="permitAll()" />
         <intercept-url pattern="/logout" access="permitAll()" />

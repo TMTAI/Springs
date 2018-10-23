@@ -34,9 +34,9 @@
         </a>
             <ul class="treeview-menu">
                 <li><a id="linkList" th:href="@{/home}"><i
-                        class="fa fa-home"></i> Home</a></li>
+                        class="fa fa-home"></i><span th:text="#{home.title}"> Home</span></a></li>
                 <li><a id="linkList" th:href="@{/home2}"><i
-                        class="fa fa-home"></i> Home 2</a></li>
+                        class="fa fa-home"></i><span th:text="#{home.title} + 2"> Home 2</span></a></li>
             </ul></li>
         <li class="treeview"><a href="#"> <i class="fa fa-files-o"></i>
                 <span>Layout Options</span> <span class="pull-right-container">

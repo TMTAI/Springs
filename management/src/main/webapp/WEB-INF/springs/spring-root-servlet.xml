@@ -11,5 +11,5 @@
     <import resource="/appServlet/spring-servlet.xml" />
     <import resource="/appServlet/view-resolver-context.xml" />
     <import resource="/appServlet/spring-security.xml" />
-
+    <import resource="/appServlet/i18n-context.xml" />
 </beans>

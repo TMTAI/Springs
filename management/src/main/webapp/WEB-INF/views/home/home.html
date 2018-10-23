@@ -4,7 +4,9 @@ xmlns:th="http://www.thymeleaf.org">
 <body>
   <div class="title-head clearfix">
    <div class="col-sm-9 col-xs-7 no-padding">
-    <h3><i class="fa fa-table"></i> <span th:text="Home">Tiêu đề trang</span></h3>
+    <h3><i class="fa fa-table"></i> <span th:text="#{home.title}">Tiêu đề trang</span></h3>
+    
+    <h3 th:text="${message}"></h3>
   </div>
   <div class="col-sm-3 col-xs-5 icon-head">
    <div class="pull-right">

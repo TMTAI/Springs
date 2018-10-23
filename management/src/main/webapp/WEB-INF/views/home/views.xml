@@ -11,4 +11,7 @@
     <definition name="home2" extends="base">
         <put-attribute name="body" value="views/home/home2.html" />
     </definition>
+
+    <definition name="login" template="views/home/login.html">
+    </definition>
 </tiles-definitions>

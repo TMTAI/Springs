@@ -85,17 +85,14 @@
                             th:src="@{/static/images/avata.png}"
                             class="img-avata" /> <span class="text-welcome">Welcome</span>
                             <!-- th:text="${#authentication.principal.fullname}" -->
-                            <p class="name-user">Ho Va Ten</p>
+                            <p class="name-user">Guests</p>
                     </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <!--                         <a class="name-user-mobile" th:text="${#authentication.principal.fullname}">Nguyen Van A</a>  -->
-                                <a style="cursor: pointer;"
-                                id="linkChangePassword" class="btn-flat"> <i
-                                    class="fa fa-lock" aria-hidden="true"></i> <span
-                                    th:text="changePassword"> Change
-                                        Pasword</span>
-                            </a>
+                                <a style="cursor: pointer;" th:href="@{/login}" class="btn-flat">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                    <span th:text="Login"> Login</span>
+                                </a>
                             </li>
                             <li><a class="time"> <i
                                     class="fa fa-clock-o" aria-hidden="true"></i>
@@ -133,6 +130,7 @@
         </div>
         <!-- end Menu header right -->
     </nav>
+    <script type="text/javascript" th:src="@{/static/js/core-index.js}"></script>
 </div>
 
 <!-- end Header Navbar -->
