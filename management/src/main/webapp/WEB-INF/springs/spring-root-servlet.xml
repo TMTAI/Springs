@@ -12,4 +12,5 @@
     <import resource="/appServlet/view-resolver-context.xml" />
     <import resource="/appServlet/spring-security.xml" />
     <import resource="/appServlet/i18n-context.xml" />
+    <!-- <import resource="/dataSourceMySQL-JPA.xml"/> -->
 </beans>

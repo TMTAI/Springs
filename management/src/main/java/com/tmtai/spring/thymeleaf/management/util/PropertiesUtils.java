@@ -10,7 +10,7 @@ public class PropertiesUtils{
     private static String PROPERTIES = "properties";
     
     // list properties loading from resources
-    private static String[] props = {"message_en", "message_vn"};
+    private static String[] props = {"dataSourcesMysql", "message_en", "message_vn"};
     
     private static Properties prop;
     
