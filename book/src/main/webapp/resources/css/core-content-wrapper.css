@@ -1,0 +1,132 @@
+.main-box-bg select{
+	border: 1px solid #ccc;
+    padding: 4px;
+    width: 100%;
+    border-radius: 4px;
+}
+.content-wrapper{
+	padding-top: 105px!important;
+	background-color: transparent;
+}
+.title-head h3 .fa-table{
+	display: none
+}
+/*breadcrumb*/
+.content-header{
+	padding: 0px 10px 4px 10px!important;
+	position: fixed;
+    width: 100%;
+    top: 50px;
+    z-index: 9;
+}
+.fixed-head .content-header,.fixed-head .title-head{
+	background: #f4f4f4;
+}
+.fixed-head .title-head{
+	box-shadow: 1px 2px 2px #e8e8e8;
+}
+.content-header>.breadcrumb>li>a,.btn-menu-mobile .breadcrumb>li>a {
+    color: #6c88ba!important;
+    font-size: 11px;
+}
+.content-header>.breadcrumb,.btn-menu-mobile .breadcrumb{
+	position: static!important;
+	float: left!important;
+	display: inline-block!important;
+	padding: 3px 0 0 0!important;
+	background: transparent
+}
+.content-header ul{
+	margin: 0;
+	background-color: transparent;
+	display: inline-block;
+	padding: 0px!important;
+}
+.breadcrumb>li+li:before{
+	content: ""!important;
+    font-family: FontAwesome;
+    color: #222!important;
+    font-weight: bold;
+    padding: 0 2px;
+}
+.breadcrumb a,.breadcrumb a:hover,.breadcrumb a:focus{
+	color: #999;
+	text-decoration: none;
+}
+.breadcrumb li{
+	 color: #999 !important;
+    font-size: 11px;
+}
+/*end breadcrumb*/
+
+/*title head*/
+.title-head h3 i{
+	opacity: 1;
+    padding-right: 12px;
+    color: #ca9933;
+    font-size: 17px;
+}
+.sidebar-collapse .title-head{
+	width: calc(100% - 50px);
+}
+.title-head{
+	position: fixed;
+    width: calc(100% - 230px);
+    top: 74px;
+    z-index: 9;
+    padding: 0 10px 5px 10px;
+    margin-left: -10px
+}
+.title-head h3{
+	font-size: 15px;
+	margin: 0;
+	color: #0087ff;
+	text-transform: uppercase;
+	margin-top: 7px
+}
+
+.icon-head{
+	padding: 4px 5px 0px 0;
+	float: right
+}
+.icon-head a {
+	cursor: pointer;
+	display: inline-block;
+}
+.icon-head-red{
+	font-size: 21px;
+    color: #cd9933;
+    padding-left: 5px;
+}
+/*end title head*/
+
+/*background common*/
+.bg-content{
+	border: 1px solid #e5e5e5;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    color: #1a1818;
+    margin: 0 0 10px 0;
+}
+/*background common*/
+
+
+/*group btn bottom*/
+.gr-btn-bottom{
+	padding-top: 15px;
+}
+.content-bottom{
+	padding: 0 10px
+}
+
+.ms-options-wrap > button:focus, .ms-options-wrap > button{
+    border: 1px solid #d2d6de!important;
+    padding: 4px 20px 4px 5px!important;
+    font-size: 12px!important;
+    border-radius: 4px;
+}
+.icon-head-red:hover{
+	color: #b27d15;
+	transform: scale(1.1);
+}

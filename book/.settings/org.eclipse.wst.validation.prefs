@@ -1,0 +1,12 @@
+DELEGATES_PREFERENCE=delegateValidatorList
+USER_BUILD_PREFERENCE=enabledBuildValidatorListorg.jboss.tools.common.validation.ValidatorManager;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;
+USER_MANUAL_PREFERENCE=enabledManualValidatorListorg.jboss.tools.common.validation.ValidatorManager;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;
+USER_PREFERENCE=overrideGlobalPreferencestruedisableAllValidationfalseversion1.2.701.v201707142105
+disabled=06target
+eclipse.preferences.version=1
+override=true
+suspend=false
+vals/org.eclipse.wst.dtd.core.dtdDTDValidator/global=FF01
+vals/org.eclipse.wst.wsdl.validation.wsdl/global=FF02158org.eclipse.wst.wsdl.validation.internal.eclipse.Validator
+vals/org.fusesource.ide.camel.validation.JBossFuseToolingValidation/global=FF01
+vf.version=3
