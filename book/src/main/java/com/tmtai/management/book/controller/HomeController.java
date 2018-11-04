@@ -22,12 +22,6 @@ public class HomeController {
         ModelAndView mav = new ModelAndView("home");
         return mav;
     }
-
-    @RequestMapping(value = "/home2", method = RequestMethod.GET)
-    public ModelAndView detail() {
-        ModelAndView mav = new ModelAndView("home2");
-        return mav;
-    }
     
     @RequestMapping(value = WebConstant.CHANGE_LANG, method = RequestMethod.GET)
     public void changeLang(HttpServletRequest request, HttpServletResponse response, Locale locale,

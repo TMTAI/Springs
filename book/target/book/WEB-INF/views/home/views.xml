@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    <definition name="home" extends="base">
+        <put-attribute name="body" value="views/home/home.html" />
+    </definition>
+
+    <definition name="home2" extends="base">
+        <put-attribute name="body" value="views/home/home2.html" />
+    </definition>
+</tiles-definitions>
