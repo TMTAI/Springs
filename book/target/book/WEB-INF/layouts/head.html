@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,92 +8,103 @@
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/bootstrap/css/bootstrap.min.css}" />
-<link rel="stylesheet" type="text/css" th:href="@{/static/css/AdminLTE.min.css}" />
+	th:href="@{/static/bootstrap/css/bootstrap.min.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/fontAwesone/font-awesome.css}" />
+	th:href="@{/static/css/AdminLTE.min.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/bootstrap/css/bootstrap-select.min.css}" />
+	th:href="@{/static/fontAwesone/font-awesome.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-skin-blue.css}" />
+	th:href="@{/static/bootstrap/css/bootstrap-select.min.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-skin-purple.css}" />
+	th:href="@{/static/css/core-skin-blue.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-skin-light-blue.css}" />
+	th:href="@{/static/css/core-skin-purple.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-skin-red.css}" />
+	th:href="@{/static/css/core-skin-light-blue.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-style-common.css}" />
-<link rel="stylesheet" type="text/css" th:href="@{/static/css/core-header.css}" />
+	th:href="@{/static/css/core-skin-red.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-menu-left.css}" />
+	th:href="@{/static/css/core-style-common.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-content-wrapper.css}" />
+	th:href="@{/static/css/core-header.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-search-box.css}" />
-<link rel="stylesheet" type="text/css" th:href="@{/static/css/core-table.css}" />
-<link rel="stylesheet" type="text/css" th:href="@{/static/css/core-popup.css}" />
+	th:href="@{/static/css/core-menu-left.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-custom-scrollbar.min.css}" />
-<link rel="stylesheet" type="text/css" th:href="@{/static/css/core-footer.css}" />
+	th:href="@{/static/css/core-content-wrapper.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-style-radio-checkbox.css}" />
+	th:href="@{/static/css/core-search-box.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/css/core-responsive.css}" />
+	th:href="@{/static/css/core-table.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/core-popup.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/core-custom-scrollbar.min.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/core-footer.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/core-style-radio-checkbox.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/core-responsive.css}" />
 
 <!-- JS -->
-<script type="text/javascript" th:src="@{/static/jquery/js/jquery.min.js}"></script>
-<script type="text/javascript" th:src="@{/static/js/jquery.cookie.js}"></script>
-<script type="text/javascript" th:src="@{/static/js/custom-scrollbar.min.js}"></script>
-<script type="text/javascript" th:src="@{/static/bootstrap/js/bootstrap.min.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/bootstrap/js/bootstrap-select.min.js}"></script>
+	th:src="@{/static/jquery/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/jquery.cookie.js}"></script>
+<script type="text/javascript"
+	th:src="@{/static/js/custom-scrollbar.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/static/bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/static/bootstrap/js/bootstrap-select.min.js}"></script>
 <script type="text/javascript" th:src="@{/static/js/adminlte.min.js}"></script>
 
 <!-- datepicker -->
 <script type="text/javascript"
-    th:src="@{/static/plugins/datepicker/js/bootstrap-datepicker.js}"></script>
+	th:src="@{/static/plugins/datepicker/js/bootstrap-datepicker.js}"></script>
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/datepicker/css/bootstrap-datepicker.css}" />
+	th:href="@{/static/plugins/datepicker/css/bootstrap-datepicker.css}" />
 
 <!-- Support show popup alert -->
-<script type="text/javascript" th:src="@{/static/plugins/bootbox/bootbox.js}"></script>
+<script type="text/javascript"
+	th:src="@{/static/plugins/bootbox/bootbox.js}"></script>
 
 <!-- jQuery-validate -->
 <script type="text/javascript"
-    th:src="@{/static/jquery/validation-1.16.0/dist/jquery.validate.min.js}"></script>
+	th:src="@{/static/jquery/validation-1.16.0/dist/jquery.validate.min.js}"></script>
 <script type="text/javascript" th:src="@{/static/js/j-validate.js}"
-    th:inline="text"></script>
+	th:inline="text"></script>
 
 <!-- Table-Filterable - Table filter -->
 <script type="text/javascript"
-    th:src="@{/static/plugins/table-filterable/jquery.table-filterable.js}"></script>
+	th:src="@{/static/plugins/table-filterable/jquery.table-filterable.js}"></script>
 
 <!-- Select2 - Support Select-Box  -->
 <script type="text/javascript"
-    th:src="@{/static/plugins/select2/select2.full.js}"></script>
+	th:src="@{/static/plugins/select2/select2.full.js}"></script>
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/select2/select2.css}" />
+	th:href="@{/static/plugins/select2/select2.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/custom-scrollbar/css/custom-scrollbar.min.css}" />
+	th:href="@{/static/plugins/custom-scrollbar/css/custom-scrollbar.min.css}" />
 
 <!-- DataTables -->
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/datatables/dataTables.bootstrap.css}" />
+	th:href="@{/static/plugins/datatables/dataTables.bootstrap.css}" />
 <script type="text/javascript"
-    th:src="@{/static/plugins/datatables/jquery.dataTables.js}"></script>
+	th:src="@{/static/plugins/datatables/jquery.dataTables.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/plugins/datatables/dataTables.bootstrap.js}"></script>
-<script type="text/javascript" th:src="@{/static/datatables/datatables.js}"></script>
+	th:src="@{/static/plugins/datatables/dataTables.bootstrap.js}"></script>
+<script type="text/javascript"
+	th:src="@{/static/datatables/datatables.js}"></script>
 
 <!-- Configure for auto complete -->
-<script type="text/javascript" th:src="@{/static/jquery/jquery.autocomplete.js}"></script>
+<script type="text/javascript"
+	th:src="@{/static/jquery/jquery.autocomplete.js}"></script>
 
 <!-- loading -->
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/isloading/jquery.isloading.css}" />
+	th:href="@{/static/plugins/isloading/jquery.isloading.css}" />
 <script type="text/javascript"
-    th:src="@{/static/plugins/isloading/jquery.isloading.js}"></script>
+	th:src="@{/static/plugins/isloading/jquery.isloading.js}"></script>
 
 <!-- socket stomp-websocket -->
 <!-- <script type="text/javascript" th:src="@{/static/js/stomp.min.js}"></script> -->
@@ -102,44 +114,45 @@
 
 <!-- JQuery File UpLoad  -->
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/vendor/jquery.ui.widget.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/vendor/jquery.ui.widget.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.iframe-transport.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.iframe-transport.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-process.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-process.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-image.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-image.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-video.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-video.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-audio.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-audio.js}"></script>
 <script type="text/javascript"
-    th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-validate.js}"></script>
+	th:src="@{/static/jquery/jQuery-File-Upload-9.22.0/js/jquery.fileupload-validate.js}"></script>
 
 <!-- https://github.com/aterrien/jQuery-Knob -->
 <script type="text/javascript" th:src="@{/static/jquery/jquery.knob.js}"></script>
 
 <!-- https://summernote.org/getting-started/ -->
-<script type="text/javascript" th:src="@{/static/summernote/dist/summernote.js}"></script>
+<script type="text/javascript"
+	th:src="@{/static/summernote/dist/summernote.js}"></script>
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/summernote/dist/summernote.css}" />
+	th:href="@{/static/summernote/dist/summernote.css}" />
 
 <!-- Common -->
 <script type="text/javascript" th:src="@{/static/js/common_core.js}"></script>
 <!-- EasyUI - Multiple component support -->
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/jquery-easyui-1.5/easyui.css}" />
+	th:href="@{/static/plugins/jquery-easyui-1.5/easyui.css}" />
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/jquery-easyui-1.5/icon.css}" />
+	th:href="@{/static/plugins/jquery-easyui-1.5/icon.css}" />
 <script type="text/javascript" id="script-easyui"
-    th:src="@{/static/plugins/jquery-easyui-1.5/jquery.easyui.min.js}"></script>
+	th:src="@{/static/plugins/jquery-easyui-1.5/jquery.easyui.min.js}"></script>
 
 <link rel="stylesheet" type="text/css"
-    th:href="@{/static/plugins/row-sorter/style/row-sorter.css}" />
+	th:href="@{/static/plugins/row-sorter/style/row-sorter.css}" />
 <script type="text/javascript"
-    th:src="@{/static/plugins/row-sorter/row-sorter.js}"></script>
+	th:src="@{/static/plugins/row-sorter/row-sorter.js}"></script>
 
 <script type="text/javascript" th:inline="text">
         var BASE_URL = '[[@{/}]]';

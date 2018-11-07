@@ -1,9 +1,12 @@
 package com.tmtai.management.book.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.mirage.repository.MirageRepository;
+import org.springframework.data.repository.query.Param;
+
+import com.tmtai.management.book.dto.UserDto;
 import com.tmtai.management.book.entity.User;
 
-public interface UserRepository extends CrudRepository<User, Integer>{
+public interface UserRepository extends MirageRepository<User, Long> {
 
-//    public User findByUsername(@Param(value = "username") String username);
+    public UserDto findByUsername(@Param(value = "username") String username);
 }

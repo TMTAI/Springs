@@ -9,9 +9,9 @@
            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
            http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd">
  
-    <context:annotation-config/>
+    <!-- <context:annotation-config/>
     
-    <!-- BoneCP configuration -->
+    BoneCP configuration
     <bean id="mainDataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/book_management" />
@@ -27,7 +27,7 @@
         <property name="releaseHelperThreads" value="3"/>
     </bean>
  
-    <!-- SPRING - JPA -->
+    SPRING - JPA
     <jpa:repositories base-package="com.tmtai.management.book.repository" />
  
     <bean class="org.springframework.orm.jpa.JpaTransactionManager"
@@ -58,6 +58,6 @@
                 hibernate.generate_statistics = true
             </value>
         </property>
-    </bean>
+    </bean> -->
  
 </beans>

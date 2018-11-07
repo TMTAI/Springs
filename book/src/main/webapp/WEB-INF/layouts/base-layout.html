@@ -1,50 +1,51 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layouts/head.html :: head">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
-        <!-- start header -->
-        <header class="main-header navbar-fixed-top">
-            <div tiles:substituteby="header">Header Block</div>
-        </header>
-        <!-- end header -->
+	<div class="wrapper">
+		<!-- start header -->
+		<header class="main-header navbar-fixed-top">
+			<div tiles:substituteby="header">Header Block</div>
+		</header>
+		<!-- end header -->
 
-        <!-- start left -->
-        <aside class="main-sidebar">
-            <div tiles:substituteby="left-sidebar">Left side column.</div>
-        </aside>
-        <!-- end left -->
+		<!-- start left -->
+		<aside class="main-sidebar">
+			<div tiles:substituteby="left-sidebar">Left side column.</div>
+		</aside>
+		<!-- end left -->
 
-        <!--Start page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header clearfix show-desktop">
+		<!--Start page content -->
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<section class="content-header clearfix show-desktop">
 
-                <ul class="breadcrumb">
-                    <div id="breadcrumb"></div>
-                </ul>
-            </section>
+				<ul class="breadcrumb">
+					<div id="breadcrumb"></div>
+				</ul>
+			</section>
 
-            <!-- start Content main -->
-            <div class="main_content" role="main">
-                <div class="body-content">
-                    <div class="content-bottom">
-                        <div class="clearfix" tiles:substituteby="body">Content
-                            Wrapper.</div>
-                    </div>
-                </div>
-            </div>
-            <!-- end Content main -->
-        </div>
-        <!--end page content -->
+			<!-- start Content main -->
+			<div class="main_content" role="main">
+				<div class="body-content">
+					<div class="content-bottom">
+						<div class="clearfix" tiles:substituteby="body">Content
+							Wrapper.</div>
+					</div>
+				</div>
+			</div>
+			<!-- end Content main -->
+		</div>
+		<!--end page content -->
 
-        <!--Start footer -->
-        <footer>
-            <div class="clearfix" tiles:substituteby="footer">Footer Block</div>
-            <div class="clearfix"></div>
-        </footer>
-        <!--end footer -->
-    </div>
+		<!--Start footer -->
+		<footer>
+			<div class="clearfix" tiles:substituteby="footer">Footer Block</div>
+			<div class="clearfix"></div>
+		</footer>
+		<!--end footer -->
+	</div>
 </body>
 </html>

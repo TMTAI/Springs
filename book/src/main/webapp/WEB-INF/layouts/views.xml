@@ -10,9 +10,8 @@
         <put-attribute name="left-sidebar" value="layouts/base-left-sidebar.html" />
         <put-attribute name="footer" value="layouts/base-footer.html" />
         <put-attribute name="right-sidebar" value="layouts/base-right-sidebar.html" />
-        <!-- <put-attribute name="breadcrumb" value="layouts/base-breadcrumb.html"/> -->
     </definition>
-
+    
     <definition name="leftsidebar" extends="base">
         <put-attribute name="left-sidebar" value="layouts/base-left-sidebar.html" />
     </definition>

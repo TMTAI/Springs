@@ -7,8 +7,8 @@
     <definition name="home" extends="base">
         <put-attribute name="body" value="views/home/home.html" />
     </definition>
-
-    <definition name="home2" extends="base">
-        <put-attribute name="body" value="views/home/home2.html" />
+    
+    <definition name="login" template="views/home/login.html">
     </definition>
+    
 </tiles-definitions>

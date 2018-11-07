@@ -11,135 +11,124 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user")
-public class User implements Serializable{
+@Table(name = "user")
+public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "birthday")
+    private Date birthday;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "gender")
+    private String gender;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Integer id;
-    
-    @Column(name = "username")
-    private String username;
-    
-    @Column(name = "password")
-    private String password;
-    
-    @Column(name = "first_name")
-    private String firstName;
-    
-    @Column(name = "last_name")
-    private String lastName;
-    
-    @Column(name = "address")
-    private String address;
-    
-    @Column(name = "birthday")
-    private Date birthday;
-    
-    @Column(name = "phone")
-    private String phone;
-    
+    private Long id;
+
     @Column(name = "identity_card")
     private String identityCard;
-    
-    @Column(name = "gender")
-    private int gender;
-    
-    @Column(name = "role")
-    private String role;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "username")
+    private String username;
 
     public User() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getGender() {
+        return gender;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public Long getId() {
+        return id;
     }
 
     public String getIdentityCard() {
         return identityCard;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setIdentityCard(String identityCard) {
         this.identityCard = identityCard;
     }
 
-    public int getGender() {
-        return gender;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public void setGender(int gender) {
-        this.gender = gender;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getRole() {
-        return role;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 }

@@ -1,11 +1,10 @@
 <!-- Header -->
 <!-- Logo -->
 <div class="col-sm-12 no-padding clearfix">
-    <a href="#" class="logo"> <span class="logo-mini">
+    <a href="#" class="logo">
+        <span class="logo-lg">
             <h2>LOGO</h2>
-    </span> <span class="logo-lg">
-            <h2>LOGO</h2>
-    </span>
+        </span>
     </a>
     <!-- end Logo -->
     <!-- Header Navbar-->
@@ -16,98 +15,48 @@
             class="icon-bar"></span>
         </a>
 
-        <!-- <a href="#" class="logo-mobile">
-              <span class="logo-lg">
-                <img th:src="@{/static/images/logo.png}" class="logo-blue"/>
-                <img th:src="@{/static/images/logo-white.png}" class="logo-white"/>
-                <img th:src="@{/static/images/logo-red.png}" class="logo-red"/>
-              </span>
-            </a> -->
         <div class="navbar-custom-menu">
             <div class="nav navbar-right pull-right">
                 <ul class="info-user content-nav-right">
-                    <li class="gr-btn-change-color">
-                        <button class="btn-color-gray">
-                            <i class="fa fa-square" aria-hidden="true"></i>
-                        </button>
-                        <button class="btn-color-light-blue">
-                            <i class="fa fa-square" aria-hidden="true"></i>
-                        </button>
-                        <button class="btn-color-red">
-                            <i class="fa fa-square" aria-hidden="true"></i>
-                        </button> <!-- 
-                     <button class="btn-color-blue">
-                      <i class="fa fa-square" aria-hidden="true"></i>
-                    </button>
-                    <button class="btn-color-purple">
-                      <i class="fa fa-square" aria-hidden="true"></i>
-                    </button>
-                  -->
+                    <li>
+                        <a class="time">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <span id="date_time"></span>
+                            <script type="text/javascript">window.onload = date_time('date_time');</script>
+                        </a>
                     </li>
-                    <li class="dropdown gr-notifi"><a> <i
-                            class="fa fa-user-o" aria-hidden="true"></i> <span
-                            class="notifi"> <span id="countSession"></span>
-                        </span>
-                    </a></li>
-                    <li class="dropdown item-oclock gr-notifi"><a
-                        class="dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="true"> <i class="fa fa-clock-o"
-                            aria-hidden="true"></i> <span class="notifi">5</span>
-                    </a>
+                    <li class="dropdown notifications-menu open">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            <span class="notifi">5</span>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a>Sub 123</a></li>
                             <li><a>Sub 123</a></li>
                             <li><a>Sub 123</a></li>
-                        </ul></li>
-                    <li class="dropdown gr-notifi"><a
-                        class="dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="true"> <i class="fa fa-file-o"
-                            aria-hidden="true"></i> <span class="notifi">5</span>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li><a>Sub 123</a></li>
-                            <li><a>Sub 123</a></li>
-                            <li><a>Sub 123</a></li>
-                        </ul></li>
-                    <li class="dropdown gr-notifi"><a
-                        class="dropdown-toggle" data-toggle="dropdown"
-                        aria-expanded="true"> <i class="fa fa-envelope-open"
-                            aria-hidden="true"></i> <span class="notifi">5</span>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li><a>Sub 123</a></li>
-                            <li><a>Sub 123</a></li>
-                            <li><a>Sub 123</a></li>
-                        </ul></li>
-                    <li class="dropdown"><a
-                        class="dropdown-toggle dropdown-info-user"
-                        data-toggle="dropdown" aria-expanded="true"> <img
-                            th:src="@{/static/images/avata.png}"
-                            class="img-avata" /> <span class="text-welcome">Welcome</span>
-                            <!-- th:text="${#authentication.principal.fullname}" -->
-                            <p class="name-user">Ho Va Ten</p>
-                    </a>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle dropdown-info-user" data-toggle="dropdown" aria-expanded="true">
+                            <img th:src="@{/static/images/avata.png}" class="img-avata" />
+                            <span class="text-welcome">Welcome</span>
+                            <p class="name-user">Guest</p>
+                        </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <!--                         <a class="name-user-mobile" th:text="${#authentication.principal.fullname}">Nguyen Van A</a>  -->
-                                <a style="cursor: pointer;"
-                                id="linkChangePassword" class="btn-flat"> <i
-                                    class="fa fa-lock" aria-hidden="true"></i> <span
-                                    th:text="changePassword"> Change
-                                        Pasword</span>
+                                <a style="cursor: pointer;" id="linkChangePassword" class="btn-flat"> <i
+                                    class="fa fa-lock" aria-hidden="true"></i>
+                                    <span>Change Pasword</span>
                             </a>
                             </li>
-                            <li><a class="time"> <i
-                                    class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <span id="date_time"></span> <script
-                                        type="text/javascript">window.onload = date_time('date_time');</script></a>
+                            <li>
+                                <a class="logout" th:href="@{/j_spring_security_logout}" id="logout">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                     <span>Log out</span>
+                                </a>
                             </li>
-                            <li><a class="logout"
-                                th:href="@{/j_spring_security_logout}"
-                                id="logout"> <i class="fa fa-sign-out"
-                                    aria-hidden="true"></i>Log out
-                            </a></li>
-                        </ul></li>
+                        </ul>
+                    </li>
                     <li class="language"><a
                         onclick="changeLang('${url}', 'en');"
                         href="javascript:void(0);"> <img
