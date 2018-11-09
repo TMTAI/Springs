@@ -1,5 +1,4 @@
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
-	;
+@import url("/book/static/font-awesome/css/font-awesome.css");
 
 .login-block {
 	background: linear-gradient(to bottom, #8cffb454, #007bff40);
@@ -10,7 +9,7 @@
 }
 
 .banner-sec {
-	background: url(https://static.pexels.com/photos/33972/pexels-photo.jpg)
+	background: url("/book/static/images/login.png")
 		no-repeat left bottom; background-size : cover;
 	min-height: 500px;
 	border-radius: 0 10px 10px 0;

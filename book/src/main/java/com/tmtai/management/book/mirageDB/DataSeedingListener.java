@@ -1,40 +1,37 @@
 package com.tmtai.management.book.mirageDB;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.tmtai.management.book.dto.UserDto;
 import com.tmtai.management.book.service.UserService;
+import com.tmtai.management.book.util.BookLogger;
 
 @Component
 public class DataSeedingListener implements ApplicationListener<ContextRefreshedEvent> {
     
-    private static final Logger logger = LoggerFactory.getLogger(DataSeedingListener.class);
-
-    private BCryptPasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private UserService userService;
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent arg0) {
-        passwordEncoder = new BCryptPasswordEncoder();
-
         // Admin account
         try {
             if (userService.findByUsername("admin") == null) {
                 UserDto admin = new UserDto();
                 admin.setUsername("admin");
-                admin.setPassword(passwordEncoder.encode("123456"));
+                admin.setPassword(passwordEncoder.encode("123"));
                 Date date = new Date(04, 9, 1995);
                 admin.setBirthday(date);
                 admin.setAddress("TP. HCM");
@@ -43,34 +40,34 @@ public class DataSeedingListener implements ApplicationListener<ContextRefreshed
                 admin.setLastName("Yuri");
                 admin.setGender("male");
                 admin.setIdentityCard("363768742");
-                Set roles = new HashSet(0);
+                List<String> roles = new ArrayList<String>();
                 roles.add("ROLE_ADMIN");
                 admin.setRoleForUsers(roles);
                 userService.saveOrUpdate(admin);
-                logger.info("tạo user thành công");
             }
 
             // Member account
-            if (userService.findByUsername("member") == null) {
+            if (userService.findByUsername("booker") == null) {
                 UserDto member = new UserDto();
-                member.setUsername("member");
-                member.setPassword(passwordEncoder.encode("123456"));
+                member.setUsername("booker");
+                member.setPassword(passwordEncoder.encode("123"));
                 Date date = new Date(04, 9, 1995);
                 member.setBirthday(date);
                 member.setAddress("TP. HCM");
                 member.setPhone("0898133817");
-                member.setFirstName("Member");
+                member.setFirstName("Booker");
                 member.setGender("male");
                 member.setLastName("Tai");
                 member.setIdentityCard("363768742");
-                Set roles = new HashSet(0);
+                List<String> roles = new ArrayList<String>();
                 roles.add("ROLE_BOOKER");
                 member.setRoleForUsers(roles);
                 userService.saveOrUpdate(member);
             }
+            BookLogger.logger.info("tạo user thành công");
         } catch (Exception e) {
-            System.out.println("không thể tạo user mặc định");
-            System.out.println(e.toString());
+            BookLogger.logger.error("không thể tạo user mặc định");
+            BookLogger.logger.error(e.getMessage());
         }
     }
 

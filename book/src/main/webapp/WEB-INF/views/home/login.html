@@ -1,49 +1,46 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    rel="stylesheet" id="bootstrap-css" />
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    rel="stylesheet" id="bootstrap-css" /> -->
+    
+<link th:href="@{/static/bootstrap.4.1.1/bootstrap.min.css}" rel="stylesheet" id="bootstrap-css" />
+    
 <link rel="stylesheet" type="text/css" th:href="@{/static/css/login.css}" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-<!-- <link rel="stylesheet" type="text/css"
-    th:href="@{/static/bootstrap/css/bootstrap.min.css}" id="bootstrap-css"/>
-    <link rel="stylesheet" type="text/css" th:href="@{/static/css/login.css}" />
-<script type="text/javascript" th:src="@{/static/js/jquery-3.2.1.min.js}"></script>
-<script type="text/javascript" th:src="@{/static/bootstrap/js/bootstrap.min.js}"></script> -->
+<title th:text="#{login.login}"></title>
 </head>
 <body>
     <section class="login-block">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 login-sec">
-                    <h2 class="text-center">Login Now</h2>
-                    <form class="login-form">
+                    <h2 class="text-center" th:text="#{login.login.now}">Đăng nhập ngay</h2>
+                    <form class="login-form" th:action="@{/j_spring_security_check}" method="post">
                         <div class="form-group">
                             <label for="exampleInputEmail1"
-                                class="text-uppercase">Username</label> <input
-                                type="text" class="form-control" placeholder="" />
+                                class="text-uppercase required" th:text="#{login.username}">Tên đăng nhập</label>
+                             <input type="text" class="form-control" th:placeholder="#{login.username}" name="username"/>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1"
-                                class="text-uppercase">Password</label> <input
-                                type="password" class="form-control"
-                                placeholder="" />
+                                class="text-uppercase required" th:text="#{login.password}">Mật khẩu</label>
+                            <input type="password" class="form-control" placeholder="**********" name="password"/>
                         </div>
 
                         <div class="form-check">
-                            <label class="form-check-label"> <input
-                                type="checkbox" class="form-check-input" /> <small>Remember
-                                    Me</small>
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" />
+                                <small>Remember Me</small>
                             </label>
-                            <button type="submit"
-                                class="btn btn-login float-right">Submit</button>
+                            <button type="submit" class="btn btn-login float-right" th:text="btn.login">Đăng nhập</button>
                         </div>
                     </form>
                     <div class="copy-text">
-                        <h5><a href="http://grafreez.com">Register Account </a></h5>
+                        <h5><a href="http://grafreez.com" th:text="btn.register">Đăng ký </a></h5>
                     </div>
                 </div>
                 <div class="col-md-8 banner-sec"></div>
@@ -51,3 +48,4 @@
         </div>
     </section>
 </body>
+</html>

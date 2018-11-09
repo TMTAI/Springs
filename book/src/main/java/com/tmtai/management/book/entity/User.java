@@ -16,6 +16,14 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "avatar")
+    private byte[] avatar;
+
     @Column(name = "address")
     private String address;
 
@@ -27,11 +35,6 @@ public class User implements Serializable {
 
     @Column(name = "gender")
     private String gender;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
 
     @Column(name = "identity_card")
     private String identityCard;
@@ -129,6 +132,14 @@ public class User implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public byte[] getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(byte[] avatar) {
+        this.avatar = avatar;
     }
 
 }

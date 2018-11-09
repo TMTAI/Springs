@@ -33,9 +33,6 @@ public class Role implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "role_type")
-    private String roleType;
-
     public String getDescription() {
         return description;
     }
@@ -46,10 +43,6 @@ public class Role implements Serializable {
 
     public String getName() {
         return name;
-    }
-
-    public String getRoleType() {
-        return roleType;
     }
 
     public boolean isActive() {
@@ -70,10 +63,6 @@ public class Role implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setRoleType(String roleType) {
-        this.roleType = roleType;
     }
 
 }

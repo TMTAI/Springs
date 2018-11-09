@@ -1,10 +1,13 @@
 package com.tmtai.management.book.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.tmtai.management.book.dto.UserDto;
+import com.tmtai.management.book.dto.UserLoginDto;
 import com.tmtai.management.book.entity.User;
 import com.tmtai.management.book.repository.UserRepository;
 import com.tmtai.management.book.service.UserService;
@@ -53,4 +56,10 @@ public class UserServiceImpl implements UserService {
             userRepository.save(user);
         }
     }
+
+    @Override
+    public List<UserLoginDto> getUserLogin(String username) {
+        return userRepository.findUserLogin(username);
+    }
+
 }

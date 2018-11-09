@@ -59,4 +59,9 @@ public class HomeController {
         return mav;
     }
 
+    @GetMapping(value = "/403")
+    public ModelAndView accessDeniedPage() {
+        ModelAndView mav = new ModelAndView("403");
+        return mav;
+    }
 }

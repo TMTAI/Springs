@@ -14,34 +14,50 @@
         <intercept-url pattern="/login" access="permitAll()" />
         <intercept-url pattern="/logout" access="permitAll()" />
 
-        <intercept-url pattern="/userInfo" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+        <intercept-url pattern="/booker" access="hasAnyRole('ROLE_BOOKER', 'ROLE_ADMIN')" />
         <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
+        <intercept-url pattern="/account" access="permitAll()" />
         <intercept-url pattern="/other/**" access="isAuthenticated()" />
 
         <access-denied-handler error-page="/403" />
 
-        <form-login login-page='/login' login-processing-url="/j_spring_security_check"
-            default-target-url="/userInfo" always-use-default-target="false"
-            authentication-failure-url="/login?error=true" username-parameter="username"
+        <form-login 
+            login-page='/login' 
+            login-processing-url="/j_spring_security_check"
+            default-target-url="/" 
+            always-use-default-target="true"
+            authentication-failure-url="/login?error=true" 
+            username-parameter="username"
             password-parameter="password" />
 
-        <logout logout-url="/logout" logout-success-url="/logoutSuccessful"
-            delete-cookies="JSESSIONID" invalidate-session="true" />
+        <logout 
+            logout-url="/logout" 
+            logout-success-url="/logoutSuccessful"
+            delete-cookies="JSESSIONID" 
+            invalidate-session="true" />
     </http>
 
     <authentication-manager>
-        <authentication-provider>
+<!--         <authentication-provider>
             <user-service>
                 <user name="user1" password="12345" authorities="ROLE_USER" />
                 <user name="admin1" password="12345" authorities="ROLE_USER, ROLE_ADMIN" />
             </user-service>
-        </authentication-provider>
+        </authentication-provider> -->
 
         <!-- authentication from database -->
-        <!-- <authentication-provider> <jdbc-user-service data-source-ref="myDataSource" 
-            users-by-username-query="select username,password, enabled from users where username=?" 
-            authorities-by-username-query="Select username, concat('ROLE_',user_role) user_role 
-            from user_roles where username=?" /> </authentication-provider> -->
-
+<!--         <authentication-provider>
+            <jdbc-user-service
+                data-source-ref="dataSource"
+                users-by-username-query="select username,password from user where username=? and delete_by is null"
+                authorities-by-username-query="Select username, concat('ROLE_', upper(r.name)) role_type 
+                                               from user u 
+                                               left join role_for_user ru on (u.id = ru.user_id)
+                                               left join role r on (ru.role_id = r.id)
+                                               where username=?" />
+        </authentication-provider> -->
+        <authentication-provider user-service-ref="userDetailsService" /> 
     </authentication-manager>
+    
+    <beans:bean id="userDetailsService" class="com.tmtai.management.book.service.impl.UserDetailServiceImpl"/>
 </beans:beans>
