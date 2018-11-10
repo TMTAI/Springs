@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+	<script type="text/javascript" th:src="@{/static/jquery/multiple-select/js/jquery.multiselect.js}"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{/static/jquery/multiple-select/css/jquery.multiselect.css}"/>
+
+	<div class="row main-heading ">
+		<div class="row">
+			<div class="col-sm-8 col-xs-6">
+				<h3 class="mar-tb-no red" th:text="#{book.list.title}">Tiêu đề trang</h3>
+			</div>
+			<div class="col-sm-4 col-xs-6 align-right">
+			<h3 class="mar-tb-no">
+				<i id="addNew" class="glyphicon glyphicon-plus-sign font-size-30 blue" th:title="#{icon.add}"></i>				
+			</h3>
+			</div>
+		</div>
+	</div>
+	
+	<form class="form-horizontal u-for-page-top" th:object="${bookSearchDto}" method="POST" role="form">
+
+		<div class="row core-bg-com">
+			<div class="header-box cursor-point">							
+				<h2 class="sub-header section-heading hide-title" th:text="#{search.title}">Vùng tìm kiếm</h2>
+			</div>
+			<div class="collapse in row m-0" id="search-box">
+				<div class="col-xs-12 col-sm-12">
+					<div class="col-md-12 no-padding">
+						<div class="col-md-6 form-group no-padding">
+							<label class="col-md-4 col-sm-4 control-label" th:text="#{book.code}">Mã</label>
+							<div class="col-md-8 col-sm-8">
+								<input type="text" class="j-maxlength form-control" th:field="*{code}" th:placeholder="#{book.code}"/>
+							</div>
+						</div>
+						
+						<div class="col-md-6 form-group no-padding">
+							<label class="col-md-4 col-sm-4 control-label" th:text="#{book.name}">Tên</label>
+							<div class="col-md-8 col-sm-8">
+								<input type="text" class="form-control" th:field="*{name}" th:placeholder="#{book.name}"/>
+							</div>
+						</div>
+					</div>
+			     	<div class="col-xs-12 col-sm-12 ">
+						<div class="core-button">
+							<button type="button" class="btn-common"  id="btnSearch"><i class="fa fa-search"></i> <span th:text="#{btn.search}">Tìm kiếm</span></button>
+							<button type="button" class="btn-common"  id="btnRefresh">
+								<i class="fa fa-refresh" aria-hidden="true"></i> <span th:text="#{btn.refresh}">Làm mới</span>
+							</button>
+						</div>
+			     	</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="row" id="tableList">
+		<th:block th:include="views/book/book-table.html :: content"/>
+	</div>
+
+	<input type="hidden" id="fieldSearchHidd"/>
+	<input type="hidden" id="fieldValuesHidd"/>
+<!-- 	<input type="hidden" id="url" name="url" th:value="${bannerSearch.url}"/> -->
+</html>

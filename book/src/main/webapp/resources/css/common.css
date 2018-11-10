@@ -280,7 +280,7 @@ label.form-control {
 }
 
  
- .unit-bg-com-login {
+ .core-bg-com-login {
  	padding: 80px;
  	background: #003070;
  	opacity: 0.8;
@@ -289,7 +289,7 @@ label.form-control {
 	border-bottom: 5px solid #c5161d;
  	border-radius: 10px 100px 10px 100px; 
  }
-.unit-bg-com-login {
+.core-bg-com-login {
   color: #fff;
   }
 .login-box-body h1 {

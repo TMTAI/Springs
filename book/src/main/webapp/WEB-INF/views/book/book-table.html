@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	
+	<body th:fragment="content">
+		<div class="col-sm-12">
+			<h2 class="sub-header section-heading" th:text="#{search.result.title}">Kết quả tìm kiếm</h2>
+			<div class="table-responsive">
+				<table class="table table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th class="u_t_no">#</th>
+							<th class="u_t_action" th:text="#{book.image}">Hình ảnh</th>
+							<th class="u_t_code" th:text="#{book.code}">Mã</th>
+							<th class="u_t_title" th:text="#{book.name}">Tên</th>
+ 							<th th:text="#{book.author}">Tác giả</th>
+							<th th:text="#{book.edition}">Tái bản</th>
+                            <th class="u_t_action" th:text="#{book.action}">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody>
+ 						<th:block th:each="dataRow,i : ${pageWrapper.data}" th:with="startIndex=${pageWrapper.startIndexCurrent}">
+							<tr th:attr="data-banner-id=${dataRow.id}" class="trEdit">
+								<td class="text-center" th:text="${i.index + startIndex}"></td>
+                                <td th:text="${dataRow.image}"></td>
+								<td th:text="${dataRow.code}"></td>
+								<td th:text="${dataRow.name}"></td>
+ 								<td th:text="${dataRow.author}"></td>
+                                <td th:text="${dataRow.edition}"></td>
+                                <td class="align-center">
+                                    <i class="glyphicon glyphicon-edit custom-icon j-btn-edit" th:title="#{icon.edit}"></i>
+                                    <i class="glyphicon glyphicon-remove-sign font-size-20 red j-btn-delete" th:title="#{icon.delete}"></i>
+                                </td>
+							</tr>
+						</th:block>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- <th:block th:include="views/commons/pagination.html :: content"/> -->
+		<script type="text/javascript" th:src="@{/web-app/views/book/book-list.js}"></script>
+	</body>
+</html>

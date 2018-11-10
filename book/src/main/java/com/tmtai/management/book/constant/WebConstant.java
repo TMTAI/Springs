@@ -29,4 +29,6 @@ public class WebConstant {
     public static final String URL = "url";
 
     public static final String WORLD_WIDE_WEB = "www.";
+    
+    public static final String LIST = "/list";
 }

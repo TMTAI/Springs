@@ -39,7 +39,7 @@
   border-bottom: 1px solid #efefef;
 }
 .treeview>a>i{
-  color: #ca9933;
+  color: #339fca;
 }
 .treeview a{
   color: #fff;
@@ -50,8 +50,8 @@
   float: left;
 }
 .pull-right-container i{
-  color: #ca9933;
-  font-size: 19px;
+  color: #339fca;
+  font-size: 20px;
 }
 a:hover, a:active, a:focus {
   outline: none;

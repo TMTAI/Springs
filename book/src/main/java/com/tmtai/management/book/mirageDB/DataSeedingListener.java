@@ -11,7 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import com.tmtai.management.book.dto.UserDto;
+import com.tmtai.management.book.dto.UserEditDto;
 import com.tmtai.management.book.service.UserService;
 import com.tmtai.management.book.util.BookLogger;
 
@@ -29,7 +29,7 @@ public class DataSeedingListener implements ApplicationListener<ContextRefreshed
         // Admin account
         try {
             if (userService.findByUsername("admin") == null) {
-                UserDto admin = new UserDto();
+                UserEditDto admin = new UserEditDto();
                 admin.setUsername("admin");
                 admin.setPassword(passwordEncoder.encode("123"));
                 Date date = new Date(04, 9, 1995);
@@ -48,7 +48,7 @@ public class DataSeedingListener implements ApplicationListener<ContextRefreshed
 
             // Member account
             if (userService.findByUsername("booker") == null) {
-                UserDto member = new UserDto();
+                UserEditDto member = new UserEditDto();
                 member.setUsername("booker");
                 member.setPassword(passwordEncoder.encode("123"));
                 Date date = new Date(04, 9, 1995);

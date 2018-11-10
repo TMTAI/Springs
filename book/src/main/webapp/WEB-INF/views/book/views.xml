@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+	
+<tiles-definitions>
+	<definition name="book.list" extends="base">
+    	<put-attribute name="body" value="views/book/book-list.html"/>
+  	</definition>
+<!--   	<definition name="book.edit" extends="base">
+    	<put-attribute name="body" value="views/book/book-edit.html"/>
+  	</definition>
+  	<definition name="book.table" extends="ajax">
+    	<put-attribute name="body" value="views/book/book-table.html"/>
+  	</definition> -->
+  	
+</tiles-definitions>

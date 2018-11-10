@@ -233,7 +233,7 @@ select{
 .datepicker-days .active.day{
 	background: #09f!important
 }
-.unit-menu-tree .unit-tree{
+.core-menu-tree .core-tree{
 	overflow: auto
 }
 .ms-options-wrap > .ms-options > ul label{

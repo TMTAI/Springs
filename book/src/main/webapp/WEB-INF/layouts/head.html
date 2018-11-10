@@ -56,6 +56,10 @@
 <!-- Css cho radio-checkbox -->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/static/css/core-style-radio-checkbox.css}" />
+    
+<!-- Css cho radio-checkbox -->
+<link rel="stylesheet" type="text/css"
+    th:href="@{/static/css/css-styles.css}" />
 
 <!-- JS -->
 <script type="text/javascript"
@@ -167,20 +171,20 @@
 
 <script type="text/javascript" th:inline="text">
         var BASE_URL = '[[@{/}]]';
+        
         var APP_LOCALE = '[[${session.localeSelect}]]';
-        var DATE_FORMAT = '[[${session.formatDate}]]';
-        if( DATE_FORMAT ) {
-            DATE_FORMAT = DATE_FORMAT.toLowerCase();
-        } else {
-            DATE_FORMAT = 'dd/mm/yyyy';
-        }
-        
+        var DATE_FORMAT = 'dd/MM/yyyy';
         var FORMAT_NUMBER = "#,##0.##";
-        
-        var LOADING = '[[#{loading.label}]]';
-        var MSG_DEL_CONFIRM = '[[#{message.confirm.delete.content}]]';
-        // label for search mutilple
-        var SEARCH_LABEL = '[[#{searchcondition.label}]]';
+
+        $(document).ready(function() {
+            $.ajax({
+                type  : "GET",
+                url   : BASE_URL + "menu/leftsidebar",
+                complete: function (data) {
+                    $(".main-sidebar").html(data.responseText);
+                }
+            }); 
+        });
 </script>
 </head>
 </html>

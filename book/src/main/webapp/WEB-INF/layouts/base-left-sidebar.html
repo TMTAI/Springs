@@ -4,14 +4,14 @@
             <li>
                 <a>
                     <i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
-                    <span class="text-main" th:text="${menuDto.code}"></span>
+                    <span class="text-main text-uppercase" th:text="#{${menuDto.code}}"></span>
                 </a>
             </li>
             <th:block th:each="menu1: ${menuDto.listSubMenu}" >
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-dashboard"></i>
-                        <span th:text="${menu1.code}"></span>
+                        <i class="fa fa-bookmark-o"></i>
+                        <span class="text-uppercase" th:text="#{${menu1.code}}"></span>
                         <span class="pull-right-container">
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
@@ -20,8 +20,8 @@
                         <th:block th:each="menu2: ${menu1.listSubMenu}">
                             <li>
                                 <a id="linkList" th:href="${menu2.link}">
-                                    <i class="fa fa-home"></i>
-                                    <span th:text="${menu2.code}"></span>
+                                    <i class="fa fa-book"></i>
+                                    <span class="text-uppercase" th:text="#{${menu2.code}}"></span>
                                         <span class="pull-right-container">
                                     </span>
                                 </a>

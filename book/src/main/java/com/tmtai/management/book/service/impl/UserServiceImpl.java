@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tmtai.management.book.dto.UserDto;
+import com.tmtai.management.book.dto.UserEditDto;
 import com.tmtai.management.book.dto.UserLoginDto;
 import com.tmtai.management.book.entity.User;
 import com.tmtai.management.book.repository.UserRepository;
@@ -20,14 +20,14 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
     @Override
-    public UserDto findByUsername(String username) {
-        UserDto userDto = userRepository.findByUsername(username);
+    public UserEditDto findByUsername(String username) {
+        UserEditDto userDto = userRepository.findByUsername(username);
         return userDto;
     }
 
     @Override
-    public void saveOrUpdate(UserDto userDto) {
-        UserDto userFind = userRepository.findByUsername(userDto.getUsername());
+    public void saveOrUpdate(UserEditDto userDto) {
+        UserEditDto userFind = userRepository.findByUsername(userDto.getUsername());
         if (userFind != null) {
             User user = new User();
             // update
